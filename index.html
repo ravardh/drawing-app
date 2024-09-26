@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Drawing App JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <section class="tools-board">
+      <div class="all-tools shapes-tool">
+        <div class="row">
+          <label class="title">Shapes</label>
+          <ul class="options">
+            <li class="option tool" id="line">
+              <span class="icon material-symbols-rounded">pen_size_3</span>
+              <span class="name">Line</span>
+            </li>
+            <li class="option tool" id="rect">
+              <span class="icon material-symbols-rounded">crop_square</span>
+              <span class="name">Rectangle</span>
+            </li>
+            <li class="option tool" id="circle">
+              <span class="icon material-symbols-rounded">circle</span>
+              <span class="name">Circle</span>
+            </li>
+            <li class="option tool" id="triangle">
+              <span class="icon material-symbols-rounded">change_history</span>
+              <span class="name">Triangle</span>
+            </li>
+            <li class="option">
+              <input type="checkbox" id="fill-color">
+              <label for="fill-color">Fill color</label>
+            </li>
+          </ul>
+        </div>
+        <div class="row options-tool">
+          <label class="title">Options</label>
+          <ul class="options">
+            <li class="option tool active" id="brush">
+              <span class="icon material-symbols-rounded">brush</span>
+              <span class="name">Brush</span>
+            </li>
+            <li class="option tool" id="eraser">
+              <span class="icon material-symbols-rounded">ink_eraser</span>
+              <span class="name">Eraser</span>
+            </li>
+            <li class="option">
+              <input type="range" id="brush-size-slider" min="1" max="100" value="5">
+            </li>
+          </ul>
+        </div>
+        <div class="joined-tools">
+          <div class="row colors-tool">
+            <label class="title">Colors</label>
+            <ul class="options colors">
+              <li class="option"></li>
+              <li class="option selected"></li>
+              <li class="option"></li>
+              <li class="option"></li>
+              <li class="option">
+                <input type="color" id="color-picker">
+              </li>
+            </ul>
+          </div>
+          <div class="row actions-tool">
+            <label class="title">Actions</label>
+            <ul class="options">
+              <li class="option" id="undo">
+                <span class="icon material-symbols-rounded">undo</span>
+                <span class="name">Undo</span>
+              </li>
+              <li class="option" id="redo">
+                <span class="icon material-symbols-rounded">redo</span>
+                <span class="name">Redo</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row buttons">
+        <button class="clear-canvas">
+          <span class="icon material-symbols-rounded">delete</span>
+          <span class="name">Clear Canvas</span>
+        </button>
+        <button class="save-img">
+          <span class="icon material-symbols-rounded">download</span>
+          <span class="name">Save As Image</span>
+        </button>
+      </div>
+    </section>
+    <section class="drawing-board">
+      <canvas></canvas>
+    </section>
+  </div>
+
+</body>
+
+</html>
